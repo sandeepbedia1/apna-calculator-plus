@@ -6,12 +6,12 @@ import { cn } from '@/lib/utils';
 import { Calculator } from 'lucide-react';
 
 const CalculatorCard: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'gram-to-rupees' | 'rupees-to-gram'>('gram-to-rupees');
+  const [activeTab, setActiveTab] = useState<'rupees-to-gram' | 'gram-to-rupees'>('rupees-to-gram');
   const [pricePerKg, setPricePerKg] = useState<string>(''); // Changed from number to string, empty initial value
 
   const tabs = [
-    { id: 'gram-to-rupees', label: 'Gram to Rupees' },
     { id: 'rupees-to-gram', label: 'Rupees to Gram' },
+    { id: 'gram-to-rupees', label: 'Gram to Rupees' },
   ];
 
   return (
@@ -49,7 +49,7 @@ const CalculatorCard: React.FC = () => {
                 ? "border-calculator-primary text-calculator-primary"
                 : "border-transparent text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300"
             )}
-            onClick={() => setActiveTab(tab.id as 'gram-to-rupees' | 'rupees-to-gram')}
+            onClick={() => setActiveTab(tab.id as 'rupees-to-gram' | 'gram-to-rupees')}
           >
             {tab.label}
           </button>

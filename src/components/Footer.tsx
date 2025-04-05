@@ -4,8 +4,8 @@ import { Instagram, Facebook, Twitter, Github } from 'lucide-react';
 
 const Footer = () => {
   const socialLinks = [
-    { name: 'Instagram', icon: <Instagram className="h-5 w-5" />, url: 'https://instagram.com' },
-    { name: 'Facebook', icon: <Facebook className="h-5 w-5" />, url: 'https://facebook.com' },
+    { name: 'Instagram', icon: <Instagram className="h-5 w-5" />, url: 'https://www.instagram.com/__who__am__i__007__/profilecard/?igsh=aW1mZDk4ODdsN25t' },
+    { name: 'Facebook', icon: <Facebook className="h-5 w-5" />, url: 'https://www.facebook.com/share/1DP1SVf4zo/' },
     { name: 'Twitter', icon: <Twitter className="h-5 w-5" />, url: 'https://twitter.com' },
     { name: 'GitHub', icon: <Github className="h-5 w-5" />, url: 'https://github.com' },
   ];

@@ -21,7 +21,7 @@ const Index = () => {
                   1. Enter the price per kilogram in the input field at the top.
                 </li>
                 <li className="hover-card p-3 rounded-lg">
-                  2. Choose between "Gram to Rupees" or "Rupees to Gram" conversion.
+                  2. Choose between "Rupees to Gram" or "Gram to Rupees" conversion.
                 </li>
                 <li className="hover-card p-3 rounded-lg">
                   3. Enter the value you want to convert.
