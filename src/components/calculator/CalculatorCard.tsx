@@ -7,7 +7,7 @@ import { Calculator } from 'lucide-react';
 
 const CalculatorCard: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'gram-to-rupees' | 'rupees-to-gram'>('gram-to-rupees');
-  const [pricePerKg, setPricePerKg] = useState<number>(5000); // Default price per kg is 5000 rupees
+  const [pricePerKg, setPricePerKg] = useState<string>(''); // Changed from number to string, empty initial value
 
   const tabs = [
     { id: 'gram-to-rupees', label: 'Gram to Rupees' },
@@ -30,10 +30,11 @@ const CalculatorCard: React.FC = () => {
           id="price-per-kg"
           type="number"
           value={pricePerKg}
-          onChange={(e) => setPricePerKg(Number(e.target.value))}
+          onChange={(e) => setPricePerKg(e.target.value)}
           className="calculator-input"
-          min="1"
+          min="0"
           step="1"
+          placeholder="Enter price per kg"
         />
       </div>
       
@@ -58,9 +59,9 @@ const CalculatorCard: React.FC = () => {
       {/* Tab Content */}
       <div className="animate-fade-in">
         {activeTab === 'gram-to-rupees' ? (
-          <GramToRupees pricePerKg={pricePerKg} />
+          <GramToRupees pricePerKg={pricePerKg === '' ? 0 : Number(pricePerKg)} />
         ) : (
-          <RupeesToGram pricePerKg={pricePerKg} />
+          <RupeesToGram pricePerKg={pricePerKg === '' ? 0 : Number(pricePerKg)} />
         )}
       </div>
     </div>

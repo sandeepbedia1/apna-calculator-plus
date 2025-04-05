@@ -53,7 +53,7 @@ const GramToRupees: React.FC<GramToRupeesProps> = ({ pricePerKg }) => {
           {rupees ? `₹ ${rupees}` : '₹ 0.00'}
         </div>
         <div className="text-xs text-gray-500 mt-2">
-          Based on ₹{pricePerKg} per kg
+          {pricePerKg ? `Based on ₹${pricePerKg} per kg` : 'Please enter price per kg'}
         </div>
       </div>
       
