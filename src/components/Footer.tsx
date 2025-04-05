@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Instagram, Facebook, Twitter, Github } from 'lucide-react';
 
@@ -37,8 +36,8 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="mt-6 text-center text-sm text-gray-500 dark:text-gray-400">
-          &copy; {new Date().getFullYear()} Apna Calculator. All rights reserved.
+        <div className="mt-6 text-center text-xs text-gray-500 dark:text-gray-400">
+          DEVELOPED BY © <span className="font-semibold">SANDEEP BEDIA</span>
         </div>
       </div>
     </footer>
